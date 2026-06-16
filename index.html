@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE HOOD · Premium Streetwear & Sneakers</title>
+  <title>THE HOOD · Premium Streetwear & Sneakers Marketplace</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <style>
-    /* ── Variables de Diseño Hypebeast Hacia el Futuro ── */
+    /* ── Variables de Diseño Premium (Estilo StockX / Kith) ── */
     :root {
-      --bg-black:   #000000;
-      --bg-dark:    #0A0A0A;
-      --card-bg:    #111111;
-      --border-color:#1E1E1E;
-      --accent:     #FF0000; /* Rojo Supreme/Hype */
+      --bg-black:   #050505;
+      --bg-dark:    #0F0F0F;
+      --card-bg:    #161616;
+      --border-color:#222222;
+      --accent:     #FF3333; /* Hype Red */
       --text-white: #FFFFFF;
-      --text-gray:  #8E8E93;
+      --text-gray:  #999999;
       --font-urban: 'Space Grotesk', sans-serif;
       --font-body:  'Inter', sans-serif;
     }
@@ -27,10 +27,10 @@
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); color: var(--text-white); background: var(--bg-black); overflow-x: hidden; }
 
-    /* ── Barra de Navegación Minimalista Superior ── */
+    /* ── Navbar Estilo Minimalista de Lujo ── */
     .navbar {
-      background: rgba(0, 0, 0, 0.9);
-      backdrop-filter: blur(20px);
+      background: rgba(5, 5, 5, 0.95);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-color);
       padding: 1.1rem 0;
       position: fixed;
@@ -42,20 +42,20 @@
       font-family: var(--font-urban);
       font-weight: 700;
       font-size: 1.5rem;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.03em;
       color: var(--text-white) !important;
       text-transform: uppercase;
     }
     .navbar-brand span {
-      background: var(--accent);
-      color: #fff;
-      padding: 0.1rem 0.4rem;
-      margin-left: 0.2rem;
-      font-weight: 700;
+      color: #000;
+      background: var(--text-white);
+      padding: 0.15rem 0.5rem;
+      margin-left: 0.3rem;
+      font-size: 1.2rem;
     }
     .nav-link {
       color: var(--text-gray) !important;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       font-weight: 600;
@@ -70,15 +70,13 @@
       color: var(--text-white);
       font-size: 1.25rem;
       cursor: pointer;
-      display: flex;
-      align-items: center;
     }
     .cart-badge {
       position: absolute;
       top: -6px;
       right: -8px;
-      background: var(--text-white);
-      color: #000;
+      background: var(--accent);
+      color: #fff;
       font-size: 0.65rem;
       font-weight: 700;
       padding: 0.15rem 0.35rem;
@@ -86,9 +84,573 @@
       font-family: var(--font-urban);
     }
 
-    /* ── Hero Brutalista Premium ── */
+    /* ── Hero Directo y Profesional ── */
     #hero {
       min-height: 85vh;
       background: 
-        linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%),
-        url('
+        linear-gradient(to bottom, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.9) 100%),
+        url('https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-top: 5rem;
+    }
+    .hero-tag {
+      font-family: var(--font-urban);
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      font-size: 0.85rem;
+      margin-bottom: 0.8rem;
+    }
+    .hero-title {
+      font-family: var(--font-urban);
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-gray);
+      max-width: 520px;
+      margin-bottom: 2.2rem;
+      line-height: 1.6;
+    }
+    .btn-hood {
+      background: var(--text-white);
+      color: var(--bg-black);
+      font-family: var(--font-urban);
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.95rem 2.2rem;
+      border-radius: 0;
+      border: 1px solid var(--text-white);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-hood:hover {
+      background: transparent;
+      color: var(--text-white);
+    }
+
+    /* ── Marcas Auténticas ── */
+    .brands-section {
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.8rem 0;
+    }
+    .brand-ticker {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .brand-name {
+      font-family: var(--font-urban);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333333;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    .brand-name:hover { color: var(--text-white); }
+
+    /* ── Filtros del Catálogo ── */
+    .filter-btn {
+      background: transparent;
+      border: 1px solid #252525;
+      color: var(--text-gray);
+      font-family: var(--font-urban);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      padding: 0.45rem 1.4rem;
+      border-radius: 0;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--text-white);
+      color: var(--text-white);
+      background: #111;
+    }
+
+    /* ── Tarjetas de Producto Limpias (Estilo Catálogo StockX) ── */
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .product-card:hover {
+      border-color: #444;
+      transform: translateY(-3px);
+    }
+    .img-container {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      background: #1A1A1A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .img-container img {
+      transform: scale(1.04);
+    }
+    .brand-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #000000;
+      color: var(--text-white);
+      font-family: var(--font-urban);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      border: 1px solid #222;
+      z-index: 2;
+    }
+    .product-info {
+      padding: 1.1rem;
+      background: var(--card-bg);
+    }
+    .product-title {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      color: var(--text-white);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      height: 2.4rem;
+      line-height: 1.2rem;
+    }
+    .product-status {
+      font-size: 0.72rem;
+      color: #00FF66; /* Verde StockX (Verificado) */
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .product-status i { margin-right: 2px; }
+    
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #222;
+      padding-top: 0.8rem;
+    }
+    .product-price {
+      font-family: var(--font-urban);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .btn-add-cart {
+      background: var(--text-white);
+      color: var(--bg-black);
+      border: none;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-add-cart:hover {
+      background: var(--accent);
+      color: var(--text-white);
+    }
+
+    @media (max-width: 576px) {
+      .img-container { height: 175px; } /* Proporciones exactas en pantallas retina de iPhone */
+      .product-title { font-size: 0.82rem; height: 2.2rem; line-height: 1.1rem; }
+    }
+
+    /* ── Carrito de Compra Desplegable (Offcanvas) ── */
+    .offcanvas {
+      background: var(--bg-dark);
+      border-left: 1px solid var(--border-color);
+      color: var(--text-white);
+      width: 380px !important;
+    }
+    @media (max-width: 400px) { .offcanvas { width: 100% !important; } }
+    .offcanvas-header { border-bottom: 1px solid var(--border-color); padding: 1.5rem; }
+    .offcanvas-title { font-family: var(--font-urban); font-weight: 700; text-transform: uppercase; font-size: 1.1rem; }
+    .btn-close-white { filter: invert(1); opacity: 0.8; }
+    
+    .cart-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .cart-item-img { width: 65px; height: 65px; object-fit: cover; background: #222; border: 1px solid #333; }
+    .cart-item-info { flex-grow: 1; min-width: 0; }
+    .cart-item-title {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-white);
+      margin: 0 0 0.2rem 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cart-item-brand { font-family: var(--font-urban); font-size: 0.68rem; text-transform: uppercase; color: var(--text-gray); margin: 0; }
+    .cart-item-price { font-family: var(--font-urban); font-size: 0.85rem; color: var(--text-white); font-weight: 700; margin-top: 0.2rem; }
+    
+    .btn-remove { background: transparent; border: none; color: #555; cursor: pointer; transition: color 0.2s; }
+    .btn-remove:hover { color: var(--accent); }
+    
+    .cart-footer { border-top: 1px solid var(--border-color); padding: 1.5rem; background: var(--bg-black); }
+    .total-row { display: flex; justify-content: space-between; font-family: var(--font-urban); font-weight: 700; font-size: 1.15rem; margin-bottom: 1.2rem; }
+    .total-row span:last-child { color: #00FF66; }
+
+    /* ── Banner Premium Acceso VIP ── */
+    .banner-drop {
+      background: linear-gradient(180deg, #090909 0%, #000000 100%);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 5.5rem 0;
+      text-align: center;
+    }
+    .banner-title {
+      font-family: var(--font-urban);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .banner-title span { color: var(--accent); }
+    .input-hood {
+      background: #111111;
+      border: 1px solid #333333;
+      color: #fff;
+      border-radius: 0;
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+    }
+    .input-hood:focus {
+      background: #151515;
+      border-color: var(--text-white);
+      box-shadow: none;
+      color: #fff;
+    }
+
+    /* ── Footer Corporativo ── */
+    footer {
+      background: #000000;
+      color: var(--text-gray);
+      padding: 4.5rem 0 2rem;
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border-color);
+    }
+    footer h5 {
+      font-family: var(--font-urban);
+      color: var(--text-white);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.05em;
+    }
+    footer a { color: var(--text-gray); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--text-white); }
+    .social-icons a { font-size: 1.15rem; color: var(--text-gray); margin-right: 1.2rem; transition: color 0.2s; }
+    .social-icons a:hover { color: var(--text-white); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">THE HOOD<span>MARKET</span></a>
+    
+    <div class="d-flex align-items-center order-lg-3 gap-3">
+      <button class="cart-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#sidebarCart">
+        <i class="bi bi-bag"></i>
+        <span id="cartCount" class="cart-badge">0</span>
+      </button>
+      <button class="navbar-toggler border-0 text-white p-0 ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navMenu">
+      <ul class="navbar-nav gap-lg-4 text-center mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#shop">Catálogo StockX</a></li>
+        <li class="nav-item"><a class="nav-link" href="#drop">Lanzamientos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Verificación</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <p class="hero-tag">Verified Deadstock Supply</p>
+        <h1 class="hero-title">AUTHENTIC<br>STREETWEAR</h1>
+        <p class="hero-subtitle">Accede a las colecciones más exclusivas y drops agotados globalmente. Autenticidad certificada artículo por artículo por nuestro equipo de expertos.</p>
+        <a href="#shop" class="btn-hood">Explorar Existencias</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="brands-section">
+  <div class="container">
+    <div class="brand-ticker">
+      <div class="brand-name">Air Jordan</div>
+      <div class="brand-name">Supreme</div>
+      <div class="brand-name">Stüssy</div>
+      <div class="brand-name">Off-White</div>
+      <div class="brand-name">Nude Project</div>
+      <div class="brand-name">Cold Culture</div>
+      <div class="brand-name">Carhartt WIP</div>
+    </div>
+  </div>
+</div>
+
+<section id="shop" class="py-5">
+  <div class="container py-3">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
+      <div>
+        <h2 class="font-urban fw-bold text-uppercase m-0" style="letter-spacing:-0.01em; font-size:1.5rem;">Últimos Artículos Verificados</h2>
+        <p class="text-muted small m-0 mt-1">Precios en tiempo real vinculados al mercado de reventa actual</p>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="filter-btn active" onclick="filtrarProductos('all', this)">Todos</button>
+        <button class="filter-btn" onclick="filtrarProductos('ropas', this)">Prendas</button>
+        <button class="filter-btn" onclick="filtrarProductos('zapas', this)">Zapatillas</button>
+      </div>
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4" id="contenedor-productos">
+      </div>
+  </div>
+</section>
+
+<section id="drop" class="banner-drop">
+  <div class="container">
+    <p class="font-urban text-uppercase" style="color:var(--accent); letter-spacing:0.15em; font-size:0.75rem; font-weight:600;">Drop Alert</p>
+    <h2 class="banner-title">Próximo lanzamiento:<br><span>Jordan 4 x Travis Scott</span></h2>
+    <p class="text-muted mx-auto mb-4" style="max-width:540px; font-size:0.9rem; line-height:1.6;">Únete a nuestra lista interna para recibir alertas instantáneas SMS cuando el mercado de reventa abra sus pujas oficiales.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-5 col-11">
+        <form class="d-flex gap-2" onsubmit="alert('Registrado con éxito para el Drop VIP.'); return false;">
+          <input type="email" class="form-control input-hood" placeholder="Introduce tu email corporativo" required />
+          <button type="submit" class="btn-hood py-2 px-4">Suscribir</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4">
+        <h4 class="font-urban text-white fw-bold mb-3" style="font-size:1.25rem;">THE HOOD MARKET</h4>
+        <p class="text-muted pe-md-3">Plataforma independiente de distribución de moda urbana limitada. No estamos afiliados directamente con las marcas comerciales; operamos bajo un estricto protocolo de reventa autenticada física en nuestro centro de control.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Marketplace</h5>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="#shop">Calzado Premium</a></li>
+          <li><a href="#shop">Street Apparel</a></li>
+          <li><a href="#shop">Accesorios Coleccionables</a></li>
+          <li><a href="#shop">Historial de Ventas</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Garantías</h5>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><a href="#">Proceso de Verificación</a></li>
+          <li><a href="#">Tiempos de Envío (UPS)</a></li>
+          <li><a href="#">Soporte 24/7</a></li>
+          <li><a href="#">Política de Devolución</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Centro Operativo Logístico</h5>
+        <p class="text-muted m-0">Autenticidad y Logística Internacional</p>
+        <p class="text-white fw-bold m-0 mt-1">ops@thehoodmarket.com</p>
+        <p class="text-muted small mt-3"><i class="bi bi-shield-lock-fill text-success me-1"></i> Transacciones protegidas vía Stripe con cifrado bancario AES-256.</p>
+      </div>
+    </div>
+    <div class="border-top border-1 border-dark pt-4 text-center text-muted small">
+      <p>© 2026 THE HOOD MARKETPLACE SRL. Desarrollado técnicamente por saamugp-dev. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarCart">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><i class="bi bi-shield-check me-2 text-success"></i>Tu Bolsa de Compra</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+    <div id="cartItemsContainer" style="overflow-y: auto; max-height: 65vh;">
+      <p class="text-muted text-center py-5">No has añadido ningún artículo verificado.</p>
+    </div>
+    
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Subtotal Estimado:</span>
+        <span id="cartTotalSum">0.00 €</span>
+      </div>
+      <button class="btn-hood w-100 py-3" onclick="alert('Conectando de forma segura con la pasarela de procesamiento...');">Proceder al pago seguro</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Base de datos exacta: El texto y el tipo de artículo coinciden perfectamente con imágenes reales de stock limpio
+  const listaProductos = [
+    { id: 1, marca: 'Air Jordan', titulo: 'Jordan 4 Retro Military Blue (2024 Edition)', precio: 245.00, categoria: 'zapas', img: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&q=80' },
+    { id: 2, marca: 'Supreme', titulo: 'Supreme Box Logo Hooded Sweatshirt Heavyweight Black', precio: 320.00, categoria: 'ropas', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80' },
+    { id: 3, marca: 'Stüssy', titulo: 'Stüssy 8 Ball Fleece Knit Sweatshirt Ash Grey', precio: 155.00, categoria: 'ropas', img: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80' },
+    { id: 4, marca: 'Off-White', titulo: 'Off-White Out Of Office Leather Calf White Black', precio: 430.00, categoria: 'zapas', img: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80' },
+    { id: 5, marca: 'Nude Project', titulo: 'Nude Project Not Sorry Cult Hoodie Chocolate Brown', precio: 89.00, categoria: 'ropas', img: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=600&q=80' },
+    { id: 6, marca: 'Cold Culture', titulo: 'Cold Culture Detroit Technical Varsity Jacket Navy Blue', precio: 139.00, categoria: 'ropas', img: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80' },
+    { id: 7, marca: 'Carhartt WIP', titulo: 'Carhartt WIP Detroit Canvas Jacket Hamilton Brown Oak', precio: 210.00, categoria: 'ropas', img: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80' },
+    { id: 8, marca: 'Air Jordan', titulo: 'Jordan 1 Retro Low OG Travis Scott Military Canary Yellow', precio: 415.00, categoria: 'zapas', img: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80' }
+  ];
+
+  // Carrito dinámico en memoria de sesión
+  let carrito = [];
+
+  // Renderizar catálogo estructurado
+  function renderProductos(productosAMostrar) {
+    const contenedor = document.getElementById('contenedor-productos');
+    contenedor.innerHTML = '';
+    
+    productosAMostrar.forEach(p => {
+      contenedor.innerHTML += `
+        <div class="col">
+          <div class="product-card">
+            <div class="img-container">
+              <span class="brand-badge">${p.marca}</span>
+              <img src="${p.img}" alt="${p.titulo}">
+            </div>
+            <div class="product-info">
+              <div class="product-status"><i class="bi bi-patch-check-fill"></i> Auténtico Verificado</div>
+              <div class="product-title">${p.titulo}</div>
+              <div class="price-row">
+                <div class="product-price">${p.precio.toFixed(2)} €</div>
+                <button class="btn-add-cart" onclick="insertarAlCarrito(${p.id})" title="Añadir al carrito">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  // Filtrado de Categorías sin lag
+  function filtrarProductos(categoria, totalBtn) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    totalBtn.classList.add('active');
+
+    if(categoria === 'all') {
+      renderProductos(listaProductos);
+    } else {
+      const filtrados = listaProductos.filter(p => p.categoria === categoria);
+      renderProductos(filtrados);
+    }
+  }
+
+  // Lógica interactiva del Carrito
+  function insertarAlCarrito(id) {
+    const articulo = listaProductos.find(p => p.id === id);
+    carrito.push(articulo);
+    actualizarCarritoUI();
+    
+    // Abrir menú lateral automáticamente para dar feedback visual premium
+    const miSidebar = new bootstrap.Offcanvas(document.getElementById('sidebarCart'));
+    miSidebar.show();
+  }
+
+  function quitarDelCarrito(indice) {
+    carrito.splice(indice, 1);
+    actualizarCarritoUI();
+  }
+
+  function actualizarCarritoUI() {
+    document.getElementById('cartCount').innerText = carrito.length;
+    
+    const contenedorArticulos = document.getElementById('cartItemsContainer');
+    const campoTotal = document.getElementById('cartTotalSum');
+    
+    if(carrito.length === 0) {
+      contenedorArticulos.innerHTML = '<p class="text-muted text-center py-5">No has añadido ningún artículo verificado.</p>';
+      campoTotal.innerText = '0.00 €';
+      return;
+    }
+    
+    contenedorArticulos.innerHTML = '';
+    let sumaPrecios = 0;
+    
+    carrito.forEach((item, index) => {
+      sumaPrecios += item.precio;
+      contenedorArticulos.innerHTML += `
+        <div class="cart-item">
+          <img src="${item.img}" class="cart-item-img" alt="${item.titulo}">
+          <div class="cart-item-info">
+            <p class="cart-item-brand">${item.marca}</p>
+            <p class="cart-item-title">${item.titulo}</p>
+            <div class="cart-item-price">${item.precio.toFixed(2)} €</div>
+          </div>
+          <button class="btn-remove" onclick="quitarDelCarrito(${index})">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      `;
+    });
+    
+    campoTotal.innerText = sumaPrecios.toFixed(2) + ' €';
+  }
+
+  // Carga inicial asíncrona simulada
+  window.onload = () => {
+    renderProductos(listaProductos);
+  };
+</script>
+
+</body>
+</html>
